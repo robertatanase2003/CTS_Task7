@@ -1,5 +1,7 @@
 package en.ase.sqt.videoplayer;
 
+import en.ase.sqt.videoplayer.core.VideoPlayer;
+
 public class Marketing {
     public static void main(String[] args) {
         VideoPlayer video = null;

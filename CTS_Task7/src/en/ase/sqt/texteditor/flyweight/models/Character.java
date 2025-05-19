@@ -16,7 +16,13 @@ public class Character implements Displayable {
 
 
     @Override
-    public void display(CharacterContext var1) {
-
+    public void display(CharacterContext context) {
+        System.out.printf(
+                "Char: '%s' at pos %d, size %d, font='%s', weight='%s', color='%s'%n",
+                context.getCharacter(),
+                context.getPosition(),
+                context.getFontSize(),
+                font, weight, color
+        );
     }
 }

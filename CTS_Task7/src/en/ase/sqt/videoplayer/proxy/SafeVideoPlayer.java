@@ -1,7 +1,7 @@
-package en.ase.sqt.videoplayer;
+package en.ase.sqt.videoplayer.proxy;
 
 import en.ase.sqt.videoplayer.core.VideoPlayer;
-import en.ase.sqt.videoplayer.proxy.IVideoPlayer;
+import en.ase.sqt.videoplayer.proxy.abstracts.IVideoPlayer;
 
 import java.lang.reflect.Field;
 

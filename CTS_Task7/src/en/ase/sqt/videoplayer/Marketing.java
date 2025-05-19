@@ -1,21 +1,19 @@
 package en.ase.sqt.videoplayer;
 
 import en.ase.sqt.videoplayer.core.VideoPlayer;
+import en.ase.sqt.videoplayer.proxy.abstracts.IVideoPlayer;
+import en.ase.sqt.videoplayer.proxy.SafeVideoPlayer;
 
 public class Marketing {
     public static void main(String[] args) {
-        VideoPlayer video = null;
-        try{
-            video = new VideoPlayer("Kebap marketing.mp4");
-            System.out.println(video.playVideo());
-        } catch(NullPointerException e){
-            System.out.println("The video is not rendered yet...");
-        }
+        VideoPlayer realVideoPlayer = new VideoPlayer("Kebap marketing.mp4");
+        IVideoPlayer player = new SafeVideoPlayer(realVideoPlayer);
 
+        System.out.println(player.playVideo());
 
         try {
             Thread.sleep(5000);
-            System.out.println("Playing " + video.playVideo());
+            System.out.println("Playing: " + player.playVideo());
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
